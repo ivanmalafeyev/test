@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { "title": "Главная" })
+  <!--
+    !lorem
+-->
+
+  <body>
+    <div class="_wrapper">
+      @@include('html/header.html', {})
+      <div class="content">
+        <div class="_container">
+          <div class="form-wrapper">
+            <form id="form" action="#" class="block-form">
+              <div class="block-form__title">Стили элементов форм</div>
+              <div class="block-form__item">
+                <label for="formName" class="block-form__label">Имя:</label>
+                <input
+                  id="formName"
+                  autocomplete="off"
+                  type="text"
+                  name="name"
+                  data-value=""
+                  class="block-form__input _input _req"
+                />
+              </div>
+              <div class="block-form__item">
+                <label for="formEmail" class="block-form__label">E-mail:</label>
+                <input
+                  id="formEmail"
+                  autocomplete="off"
+                  type="email"
+                  name="email"
+                  data-value=""
+                  class="block-form__input _input _req"
+                />
+              </div>
+              <div class="block-form__item">
+                <div class="block-form__label">Простой рейтинг (без JS)</div>
+                <div class="simple-rating">
+                  <div class="simple-rating__items">
+                    <input
+                      id="simple-rating__5"
+                      type="radio"
+                      name="simple-rating"
+                      value="5"
+                      class="simple-rating__item"
+                    />
+                    <label
+                      for="simple-rating__5"
+                      class="simple-rating__label"
+                    ></label>
+                    <input
+                      id="simple-rating__4"
+                      type="radio"
+                      name="simple-rating"
+                      value="4"
+                      class="simple-rating__item"
+                    />
+                    <label
+                      for="simple-rating__4"
+                      class="simple-rating__label"
+                    ></label>
+                    <input
+                      id="simple-rating__3"
+                      type="radio"
+                      name="simple-rating"
+                      value="3"
+                      class="simple-rating__item"
+                    />
+                    <label
+                      for="simple-rating__3"
+                      class="simple-rating__label"
+                    ></label>
+                    <input
+                      id="simple-rating__2"
+                      type="radio"
+                      name="simple-rating"
+                      value="2"
+                      class="simple-rating__item"
+                      checked
+                    />
+                    <label
+                      for="simple-rating__2"
+                      class="simple-rating__label"
+                    ></label>
+                    <input
+                      id="simple-rating__1"
+                      type="radio"
+                      name="simple-rating"
+                      value="1"
+                      class="simple-rating__item"
+                    />
+                    <label
+                      for="simple-rating__1"
+                      class="simple-rating__label"
+                    ></label>
+                  </div>
+                </div>
+              </div>
+              <div class="block-form__item">
+                <div class="block-form__label">Точный рейтинг</div>
+                <div data-ajax="true" class="rating rating_set">
+                  <div class="rating__body">
+                    <div class="rating__active"></div>
+                    <div class="rating__items">
+                      <input
+                        type="radio"
+                        name="rating"
+                        value="1"
+                        class="rating__item"
+                      />
+                      <input
+                        type="radio"
+                        name="rating"
+                        value="2"
+                        class="rating__item"
+                      />
+                      <input
+                        type="radio"
+                        name="rating"
+                        value="3"
+                        class="rating__item"
+                      />
+                      <input
+                        type="radio"
+                        name="rating"
+                        value="4"
+                        class="rating__item"
+                        checked
+                      />
+                      <input
+                        type="radio"
+                        name="rating"
+                        value="5"
+                        class="rating__item"
+                      />
+                    </div>
+                  </div>
+                  <div class="rating__value">3.6</div>
+                </div>
+              </div>
+              <div class="block-form__item">
+                <label for="age" class="block-form__label">Возраст:</label>
+                <select name="age" id="age" class="_select">
+                  <option value="1" selected="selected">Пункт 1</option>
+                  <option value="2">Пункт 2</option>
+                  <option value="3">Пункт 3</option>
+                  <option value="4">Пункт 4</option>
+                </select>
+              </div>
+              <div class="block-form__item">
+                <label for="formImage" class="block-form__label"
+                  >Прикрепить фото</label
+                >
+                <div class="file">
+                  <div class="file__item">
+                    <input
+                      id="formImage"
+                      accept=".jpg, .png, .gif"
+                      autocomplete="off"
+                      type="file"
+                      name="image"
+                      data-value=""
+                      class="file__input _file"
+                    />
+                    <div class="file__button">Выбрать</div>
+                    <div id="formPreview" class="file__preview"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-form__item">
+                <div class="_checkbox">
+                  <input
+                    id="formAgreement"
+                    checked
+                    type="checkbox"
+                    name="agreement"
+                    class="_req"
+                  />
+                  <label for="formAgreement" class="_checkbox__label">
+                    <span>Согласен с обработкой персональных данных</span>
+                  </label>
+                </div>
+              </div>
+              <div class="block-form__item">
+                <div class="block-form__label">Выберите:</div>
+                <div class="_radiobuttons">
+                  <div class="_radiobuttons__item">
+                    <input
+                      id="radio1"
+                      checked
+                      type="radio"
+                      value="1"
+                      name="nameradio"
+                    />
+                    <label for="radio1" class="_radiobuttons__label"
+                      ><span>Вариант №1</span></label
+                    >
+                  </div>
+                  <div class="_radiobuttons__item">
+                    <input
+                      id="radio2"
+                      type="radio"
+                      value="2"
+                      name="nameradio"
+                    />
+                    <label for="radio2" class="_radiobuttons__label"
+                      ><span>Вариант №2</span></label
+                    >
+                  </div>
+                  <div class="_radiobuttons__item">
+                    <input
+                      id="radio3"
+                      type="radio"
+                      value="3"
+                      name="nameradio"
+                    />
+                    <label for="radio3" class="_radiobuttons__label"
+                      ><span>Вариант №3</span></label
+                    >
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="button">Отправить форму</button>
+            </form>
+          </div>
+          <div class="_tabs">
+            <nav class="_tabs__items">
+              <a href="#tab_01" class="_tabs__item"
+                ><span>Первая вкладка</span></a
+              >
+              <a href="#tab_02" class="_tabs__item"
+                ><span>Вторая вкладка</span></a
+              >
+              <a href="#tab_03" class="_tabs__item"
+                ><span>Третья вкладка</span></a
+              >
+            </nav>
+            <div class="_tabs__body">
+              <div id="tab_01" class="_tabs__block">
+                Первая вкладка. Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Est ea quidem esse tempore suscipit eligendi
+                voluptatibus qui voluptates a temporibus, commodi officia
+                expedita laudantium sit eum obcaecati, optio, ratione enim?
+              </div>
+              <div id="tab_02" class="_tabs__block">
+                Вторая вкладка. Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Est ea quidem esse tempore suscipit eligendi
+                voluptatibus qui voluptates a temporibus, commodi officia
+                expedita laudantium sit eum obcaecati, optio, ratione enim?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Ratione, fugiat? Unde, quae cupiditate repellat aliquid eius
+                iste molestiae, reprehenderit rem ratione aut maxime asperiores
+                eveniet distinctio alias reiciendis consequatur illum?
+              </div>
+              <div id="tab_03" class="_tabs__block">
+                Третья вкладка. Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Est ea quidem esse tempore suscipit eligendi
+                voluptatibus qui voluptates a temporibus, commodi officia
+                expedita laudantium sit eum obcaecati, optio, ratione enim?
+              </div>
+            </div>
+          </div>
+          <div
+            data-spoilers="800,min"
+            data-accordeon
+            class="block block__1 _spoilers"
+          >
+            <div class="block__item">
+              <button
+                tabindex="-1"
+                type="button"
+                data-spoiler
+                class="block__title _spoilers__title _active"
+              >
+                Заголовок №1
+              </button>
+              <div class="block__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorum, iste impedit modi voluptas eligendi ratione atque
+                officia incidunt? Veniam, dolor! Veniam soluta illum unde id
+                accusantium distinctio nobis provident placeat.
+              </div>
+            </div>
+            <div class="block__item">
+              <button
+                tabindex="-1"
+                type="button"
+                data-spoiler
+                class="block__title _spoilers__title"
+              >
+                Заголовок №2
+              </button>
+              <div class="block__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorum, iste impedit modi voluptas eligendi ratione atque
+                officia incidunt? Veniam, dolor! Veniam soluta illum unde id
+                accusantium distinctio nobis provident placeat.
+              </div>
+            </div>
+            <div class="block__item">
+              <button
+                tabindex="-1"
+                type="button"
+                data-spoiler
+                class="block__title _spoilers__title"
+              >
+                Заголовок №3
+              </button>
+              <div class="block__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorum, iste impedit modi voluptas eligendi ratione atque
+                officia incidunt? Veniam, dolor! Veniam soluta illum unde id
+                accusantium distinctio nobis provident placeat.
+              </div>
+            </div>
+          </div>
+          <div class="text">
+            <a href="#popup" class="_popup-link">Lorem</a> ipsum dolor sit amet
+            consectetur, adipisicing elit. Accusantium perferendis animi, velit
+            earum qui asperiores architecto amet impedit aliquid, voluptates
+            esse fugit nulla. Necessitatibus voluptatem, perferendis qui dolor
+            aspernatur ipsam!
+          </div>
+        </div>
+        <div class="block-text">
+          <div class="_container">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A optio
+              nemo nisi ea fugiat veritatis deserunt, vel aspernatur illo ipsum.
+              Doloribus eligendi quam et ipsam iste quae provident, natus ad.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              eveniet ratione, aperiam quibusdam ducimus voluptates ipsam,
+              aliquid iure laboriosam sequi quia quae pariatur. Provident
+              doloribus nihil cumque excepturi autem recusandae?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A optio
+              nemo nisi ea fugiat veritatis deserunt, vel aspernatur illo ipsum.
+              Doloribus eligendi quam et ipsam iste quae provident, natus ad.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              eveniet ratione, aperiam quibusdam ducimus voluptates ipsam,
+              aliquid iure laboriosam sequi quia quae pariatur. Provident
+              doloribus nihil cumque excepturi autem recusandae?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A optio
+              nemo nisi ea fugiat veritatis deserunt, vel aspernatur illo ipsum.
+              Doloribus eligendi quam et ipsam iste quae provident, natus ad.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              eveniet ratione, aperiam quibusdam ducimus voluptates ipsam,
+              aliquid iure laboriosam sequi quia quae pariatur. Provident
+              doloribus nihil cumque excepturi autem recusandae?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A optio
+              nemo nisi ea fugiat veritatis deserunt, vel aspernatur illo ipsum.
+              Doloribus eligendi quam et ipsam iste quae provident, natus ad.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              eveniet ratione, aperiam quibusdam ducimus voluptates ipsam,
+              aliquid iure laboriosam sequi quia quae pariatur. Provident
+              doloribus nihil cumque excepturi autem recusandae?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A optio
+              nemo nisi ea fugiat veritatis deserunt, vel aspernatur illo ipsum.
+              Doloribus eligendi quam et ipsam iste quae provident, natus ad.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              eveniet ratione, aperiam quibusdam ducimus voluptates ipsam,
+              aliquid iure laboriosam sequi quia quae pariatur. Provident
+              doloribus nihil cumque excepturi autem recusandae?
+            </p>
+          </div>
+        </div>
+        <div class="block-slider">
+          <div class="_container">
+            <h2 class="block-slider__title">Слайдер</h2>
+          </div>
+          <div class="block-slider__body">
+            <div class="block-slider__info">
+              <div class="_container">
+                <div class="block-slider__info-body">
+                  <h2>Привет!</h2>
+                </div>
+              </div>
+            </div>
+            <div class="block-slider__swiper-body">
+              <!-- Slider main container -->
+              <div class="block-slider__swiper block-swiper swiper">
+                <!-- Additional required wrapper -->
+                <div class="block-swiper__wrapper swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="block-swiper__slide swiper-slide">
+                    <div class="block-swiper__image">
+                      <img
+                        src="@img/1x1.gif"
+                        data-src="@img/slides/01.jpg"
+                        alt=""
+                        class="swiper-lazy"
+                      />
+                      <div class="swiper-lazy-preloader"></div>
+                    </div>
+                  </div>
+                  <div class="block-swiper__slide swiper-slide">
+                    <div class="block-swiper__image">
+                      <img
+                        src="@img/1x1.gif"
+                        data-src="@img/slides/02.jpg"
+                        alt=""
+                        class="swiper-lazy"
+                      />
+                      <div class="swiper-lazy-preloader"></div>
+                    </div>
+                  </div>
+                  <div class="block-swiper__slide swiper-slide">
+                    <div class="block-swiper__image">
+                      <img
+                        src="@img/1x1.gif"
+                        data-src="@img/slides/03.jpg"
+                        alt=""
+                        class="swiper-lazy"
+                      />
+                      <div class="swiper-lazy-preloader"></div>
+                    </div>
+                  </div>
+                  <div class="block-swiper__slide swiper-slide">
+                    <div class="block-swiper__image">
+                      <img
+                        src="@img/1x1.gif"
+                        data-src="@img/slides/04.jpg"
+                        alt=""
+                        class="swiper-lazy"
+                      />
+                      <div class="swiper-lazy-preloader"></div>
+                    </div>
+                  </div>
+                  <div class="block-swiper__slide swiper-slide">
+                    <div class="block-swiper__image">
+                      <img
+                        src="@img/1x1.gif"
+                        data-src="@img/slides/05.jpg"
+                        alt=""
+                        class="swiper-lazy"
+                      />
+                      <div class="swiper-lazy-preloader"></div>
+                    </div>
+                  </div>
+                  <div class="block-swiper__slide swiper-slide">
+                    <div class="block-swiper__image">
+                      <img
+                        src="@img/1x1.gif"
+                        data-src="@img/slides/06.jpg"
+                        alt=""
+                        class="swiper-lazy"
+                      />
+                      <div class="swiper-lazy-preloader"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="block-swiper__pagination swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div
+                  class="block-swiper__button block-swiper__button-prev swiper-button-prev"
+                ></div>
+                <div
+                  class="block-swiper__button block-swiper__button-next swiper-button-next"
+                ></div>
+                <!-- If we need scrollbar -->
+                <div class="block-swiper__scrollbar swiper-scrollbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-images">
+          <div class="_container">
+            <div class="block-images__body">
+              <div class="block-images__items">
+                <div class="block-images__column">
+                  <div class="block-images__item">
+                    <a href="#" class="block-images__img _loading-icon">
+                      <img
+                        src="@img/1x1.gif"
+                        data-src="@img/slides/01.jpg"
+                        alt="" 
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="block-images__column">
+                  <div class="block-images__item">
+                    <a href="#" class="block-images__img _loading-icon">
+                      <img
+                        src="@img/1x1.gif"
+                        data-src="@img/slides/02.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="block-images__column">
+                  <div class="block-images__item">
+                    <a href="#" class="block-images__img _loading-icon">
+                      <img
+                        src="@img/1x1.gif"
+                        data-src="@img/slides/03.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="block-images__column">
+                  <div class="block-images__item">
+                    <a href="#" class="block-images__img _loading-icon">
+                      <img
+                        src="@img/1x1.gif"
+                        data-src="@img/slides/04.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="block-images__column">
+                  <div class="block-images__item">
+                    <a href="#" class="block-images__img _loading-icon">
+                      <img
+                        src="@img/1x1.gif"
+                        data-src="@img/slides/05.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="block-images__column">
+                  <div class="block-images__item">
+                    <a href="#" class="block-images__img _loading-icon">
+                      <img
+                        src="@img/1x1.gif"
+                        data-src="@img/slides/06.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-map">
+          <div class="_container _load-map">
+            <div id="_ymap" class="block-map__map _loading-icon"></div>
+          </div>
+        </div>
+        <div class="block-infinite">
+          <div class="_container _load-more">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
+              aperiam tenetur, laudantium hic aut maiores, vel accusamus
+              corrupti neque quis et nemo vitae necessitatibus earum illo!
+              Magnam consequatur ipsum minus. Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Ipsum corporis et numquam velit
+              aperiam porro quod, amet dolore saepe quos magni quisquam
+              laboriosam delectus iste provident odio neque sit atque.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
+              aperiam tenetur, laudantium hic aut maiores, vel accusamus
+              corrupti neque quis et nemo vitae necessitatibus earum illo!
+              Magnam consequatur ipsum minus. Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Ipsum corporis et numquam velit
+              aperiam porro quod, amet dolore saepe quos magni quisquam
+              laboriosam delectus iste provident odio neque sit atque.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
+              aperiam tenetur, laudantium hic aut maiores, vel accusamus
+              corrupti neque quis et nemo vitae necessitatibus earum illo!
+              Magnam consequatur ipsum minus. Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Ipsum corporis et numquam velit
+              aperiam porro quod, amet dolore saepe quos magni quisquam
+              laboriosam delectus iste provident odio neque sit atque.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
+              aperiam tenetur, laudantium hic aut maiores, vel accusamus
+              corrupti neque quis et nemo vitae necessitatibus earum illo!
+              Magnam consequatur ipsum minus. Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Ipsum corporis et numquam velit
+              aperiam porro quod, amet dolore saepe quos magni quisquam
+              laboriosam delectus iste provident odio neque sit atque.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
+              aperiam tenetur, laudantium hic aut maiores, vel accusamus
+              corrupti neque quis et nemo vitae necessitatibus earum illo!
+              Magnam consequatur ipsum minus. Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Ipsum corporis et numquam velit
+              aperiam porro quod, amet dolore saepe quos magni quisquam
+              laboriosam delectus iste provident odio neque sit atque.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
+              aperiam tenetur, laudantium hic aut maiores, vel accusamus
+              corrupti neque quis et nemo vitae necessitatibus earum illo!
+              Magnam consequatur ipsum minus. Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Ipsum corporis et numquam velit
+              aperiam porro quod, amet dolore saepe quos magni quisquam
+              laboriosam delectus iste provident odio neque sit atque.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
+              aperiam tenetur, laudantium hic aut maiores, vel accusamus
+              corrupti neque quis et nemo vitae necessitatibus earum illo!
+              Magnam consequatur ipsum minus. Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Ipsum corporis et numquam velit
+              aperiam porro quod, amet dolore saepe quos magni quisquam
+              laboriosam delectus iste provident odio neque sit atque.
+            </p>
+          </div>
+        </div>
+      </div>
+      @@include('html/footer.html', {})
+    </div>
+    <div id="popup" class="popup _popup">
+      <div class="popup__body">
+        <div class="popup__content _popup-content">
+          <a href="#header" class="popup__close _popup-close">X</a>
+          <div class="popup__title">Это модальное окно №1</div>
+          <div class="popup__text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque,
+            eius? Nisi, id sunt. Minus quo, sunt esse veritatis eius harum ut
+            cumque vero. Minus ad maxime suscipit deserunt odit eligendi!
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates ea ipsam, quibusdam obcaecati qui animi excepturi?
+              Error incidunt eum in doloremque voluptate sed at soluta aliquam
+              eaque deserunt! Repudiandae ab quo fugiat harum recusandae, in
+              laboriosam facere architecto commodi nam cum suscipit ducimus,
+              pariatur necessitatibus autem officiis totam. Vel non soluta,
+              obcaecati culpa laudantium modi veritatis optio impedit a,
+              corporis hic consequuntur esse cumque eum illum ut! Facilis, ab
+              illum tempore ipsa voluptate molestiae quidem ipsum alias quasi
+              possimus ullam odio dolorum eum debitis accusamus natus
+              consectetur non autem blanditiis, perferendis ipsam sed! Quis
+              quisquam eligendi ea veniam consequuntur non saepe, odio ad
+              excepturi delectus dolores voluptates. Harum, sint architecto est,
+              aperiam suscipit voluptatibus accusamus laboriosam, hic obcaecati
+              voluptatum provident! Consequatur hic rerum, impedit neque
+              quisquam ipsa nam, amet libero, perspiciatis quam repellendus.
+              Excepturi sequi necessitatibus eaque dolorem iure cupiditate
+              voluptas minima maiores culpa, vitae autem deserunt tenetur ipsa
+              neque rem libero, facilis dicta laudantium sunt perferendis, omnis
+              atque suscipit? Autem voluptatibus saepe dolores repudiandae quod
+              sequi non laboriosam molestiae, impedit libero eaque qui
+              dignissimos quia cupiditate animi ad corrupti, et aperiam odio,
+              aut veniam! Et, velit veniam necessitatibus odit assumenda
+              expedita perferendis dolor maiores aliquam incidunt corrupti porro
+              tempora libero laudantium. Voluptatibus perspiciatis, amet ipsam
+              totam provident tempore, dignissimos cumque officia quibusdam
+              vitae eius consequuntur iste iusto. Expedita quae sunt culpa
+              aliquid beatae vero saepe officiis impedit quo. Fugit unde facere
+              aliquid voluptatem praesentium ex corporis pariatur reiciendis
+              inventore quaerat illum neque placeat nulla, consectetur
+              consequatur at debitis. Deleniti enim exercitationem cumque iste.
+              Doloremque, illo dolorem? Suscipit dolorem id modi tenetur rem
+              porro reiciendis sit facere ex rerum? Quis, mollitia culpa.
+              Adipisci atque recusandae officiis dolorem minima mollitia ut
+              facere minus sed. Autem veniam inventore impedit laborum
+              reiciendis minus, in laudantium cupiditate quaerat vel consequatur
+              perferendis minima exercitationem sit.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates ea ipsam, quibusdam obcaecati qui animi excepturi?
+              Error incidunt eum in doloremque voluptate sed at soluta aliquam
+              eaque deserunt! Repudiandae ab quo fugiat harum recusandae, in
+              laboriosam facere architecto commodi nam cum suscipit ducimus,
+              pariatur necessitatibus autem officiis totam. Vel non soluta,
+              obcaecati culpa laudantium modi veritatis optio impedit a,
+              corporis hic consequuntur esse cumque eum illum ut! Facilis, ab
+              illum tempore ipsa voluptate molestiae quidem ipsum alias quasi
+              possimus ullam odio dolorum eum debitis accusamus natus
+              consectetur non autem blanditiis, perferendis ipsam sed! Quis
+              quisquam eligendi ea veniam consequuntur non saepe, odio ad
+              excepturi delectus dolores voluptates. Harum, sint architecto est,
+              aperiam suscipit voluptatibus accusamus laboriosam, hic obcaecati
+              voluptatum provident! Consequatur hic rerum, impedit neque
+              quisquam ipsa nam, amet libero, perspiciatis quam repellendus.
+              Excepturi sequi necessitatibus eaque dolorem iure cupiditate
+              voluptas minima maiores culpa, vitae autem deserunt tenetur ipsa
+              neque rem libero, facilis dicta laudantium sunt perferendis, omnis
+              atque suscipit? Autem voluptatibus saepe dolores repudiandae quod
+              sequi non laboriosam molestiae, impedit libero eaque qui
+              dignissimos quia cupiditate animi ad corrupti, et aperiam odio,
+              aut veniam! Et, velit veniam necessitatibus odit assumenda
+              expedita perferendis dolor maiores aliquam incidunt corrupti porro
+              tempora libero laudantium. Voluptatibus perspiciatis, amet ipsam
+              totam provident tempore, dignissimos cumque officia quibusdam
+              vitae eius consequuntur iste iusto. Expedita quae sunt culpa
+              aliquid beatae vero saepe officiis impedit quo. Fugit unde facere
+              aliquid voluptatem praesentium ex corporis pariatur reiciendis
+              inventore quaerat illum neque placeat nulla, consectetur
+              consequatur at debitis. Deleniti enim exercitationem cumque iste.
+              Doloremque, illo dolorem? Suscipit dolorem id modi tenetur rem
+              porro reiciendis sit facere ex rerum? Quis, mollitia culpa.
+              Adipisci atque recusandae officiis dolorem minima mollitia ut
+              facere minus sed. Autem veniam inventore impedit laborum
+              reiciendis minus, in laudantium cupiditate quaerat vel consequatur
+              perferendis minima exercitationem sit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://api-maps.yandex.ru/v3/?apikey=450a3b1c-d3e1-4cca-89cb-976dafa5f7ce&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

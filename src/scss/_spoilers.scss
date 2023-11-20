@@ -1,0 +1,35 @@
+._spoilers {
+
+	&__title {
+		width: 100%;
+		background-color: transparent;
+		text-align-last: left;
+		position: relative;
+		padding: 5px;
+		font-size: 14px;
+	}
+	&._init &__title {
+		cursor: pointer;
+		padding: 5px 20px 5px 5px;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 1px;
+			background-color: #000;
+			right: 5px;
+			top: 10px;
+			transition: transform 0.3s ease 0s;
+		}
+		&::after {
+			@include rotate(-90deg);
+		}
+		&._active::after {
+			@include rotate(0deg);
+		}
+		&:focus {
+			border: 1px solid #000;
+		}
+	}
+}
