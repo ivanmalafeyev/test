@@ -21,7 +21,6 @@ import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
 import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
-import { js1 } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 import { svgSprite } from "./gulp/tasks/svgSprite.js";
@@ -45,7 +44,7 @@ export { svgSprite };
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 
-const maintTasks = gulp.series(fonts, gulp.parallel(copy, php, html, scss, gulp.series(js1, js), images)); 
+const maintTasks = gulp.series(fonts, gulp.parallel(copy, php, html, scss, js, images)); 
 
 // Построение сценариев выполнения задач
 const dev = gulp.series(reset, maintTasks, gulp.parallel(watcher, server));

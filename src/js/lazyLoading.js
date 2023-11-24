@@ -52,9 +52,7 @@ async function getMap() {
 				"beforeend",
 				`<iframe src="${loadMapURL}" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`
 			);*/
-			console.log("start");
 			await loadMap();
-			console.log("finish");
 			loadMapBlock.classList.add("_loaded");
 		//}
 	}

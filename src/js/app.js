@@ -1,48 +1,24 @@
 /*import { useDynamicAdapt } from './modules/dynamicAdapt.js'
 useDynamicAdapt()*/
 import * as ivmalFunctions from "./modules/functions.js";
-//import "swiper/css/bundle";
-//@@include('ymap.js');
-@@include('forms.js');
-@@include('popupMenu.js');
-@@include('popupWindows.js');
-@@include('rating.js');
-@@include('lazyLoading.js');
-@@include('spoilers.js');
-@@include('swiper.js');
+
+import "./forms.js";
+import "./popupMenu.js";
+import "./popupWindows.js";
+import "./rating.js";
+import "./lazyLoading.js";
+import "./spoilers.js";
+import "./swiper.js";
 
 ivmalFunctions.isWebp();
 
 const img = document.querySelectorAll("._ibg");
-Array.prototype.forEach.call(img, (value) => {
+[].forEach.call(img, (value) => {
   if (value.querySelector("img")) {
     value.style.backgroundImage =
       "url(" + value.querySelector("img").getAttribute("src") + ")";
   }
 });
-
-// Spoilers
-/*const spoilers = document.querySelectorAll("._spoilers");
-if (spoilers) {
-  [].forEach.call(spoilers, (el) => {
-    const spoilerItems = el.querySelectorAll("._spoiler");
-    [].forEach.call(spoilerItems, (spoiler) => {
-      const spoilerBody = spoiler.nextElementSibling;
-      spoiler.addEventListener("click", (e) => {
-        if (el.classList.contains("_accordeon")) {
-          [].forEach.call(spoilerItems, (si) => {
-            if (si.classList.contains("_active") && si != spoiler) {
-              si.classList.remove("_active");
-              ivmalFunctions._slideUp(si.nextElementSibling, si);
-            }
-          });
-        }
-        spoiler.classList.toggle("_active");
-        ivmalFunctions._slideToggle(spoilerBody, spoiler);
-      });
-    });
-  });
-}*/
 
 // Responsive mobile menu
 const menuIcon = document.querySelector(".header-menu__icon");
